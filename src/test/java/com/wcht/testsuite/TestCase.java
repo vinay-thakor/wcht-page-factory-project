@@ -12,15 +12,15 @@ public class TestCase extends TestBase {
 
     HomePage homePage;
 
-    @BeforeMethod(groups = {"Regration","Smoke","Sanity"})
+    @BeforeMethod(groups = {"Regression","Smoke","Sanity"})
     public void setUp(){
         homePage = new HomePage();
 
     }
-    @Test(groups = {"regression","Smoke","Sanity"})
+    @Test(groups = {"Regression","Smoke","Sanity"})
     public void verifyScrollDownHomepageViaDownArrowButton(){
         homePage.clickOnDownArrowButton();
-        homePage.verifyBetterHomesText();
+        //homePage.verifyBetterHomesText("Better homes, friendlier communities – together");
     }
 
 }

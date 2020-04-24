@@ -8,14 +8,15 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class Loadproperty {
-
+    //Project path
     String projectPath = System.getProperty("user.dir");
-
+    //Creating object
     static Properties prop;
     static FileInputStream input;
-
+    // parameter given as "sting Key " to assign value of key from
     public String getProperty(String key) {
-        prop = new Properties();
+        //initializze the object
+         prop = new Properties();
 
         try {
             input = new FileInputStream(projectPath + "/src/test/java/com/wcht/resources/properties/config.properties");

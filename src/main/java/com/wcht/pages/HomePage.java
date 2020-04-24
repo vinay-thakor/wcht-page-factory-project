@@ -6,7 +6,6 @@ package com.wcht.pages;/*
 import com.wcht.utility.Utility;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Reporter;
@@ -15,12 +14,9 @@ public class HomePage extends Utility {
 
     private static final Logger log = LogManager.getLogger(HomePage.class.getName());
 
-//    //list of elements and their locations
-//    By downArrowButton = By.xpath("//button[@class='home-carousel__down-arrow js-to-content']");
-//    By betterHomesText = By.xpath("//div[@class='grid-column']//h1");
-
     @FindBy(xpath = "//button[@class='home-carousel__down-arrow js-to-content']" )
     WebElement _downArrowButton;
+
     @FindBy(xpath = "//div[@class='grid-column']//h1")
     WebElement _betterHomesText;
 
@@ -33,10 +29,11 @@ public class HomePage extends Utility {
 
     }
 
-    public void verifyBetterHomesText() {
-        Reporter.log("verify betterHomes Text " + _betterHomesText + "<br>");
-        verifyTextAssertMethod(_betterHomesText,"Better homes, friendlier communities – together");
-        log.info("verify betterHomes Text " + _betterHomesText);
-    }
+//    public void verifyBetterHomesText(String verifyText)  {
+//
+//        Reporter.log("verify  Text : " + verifyText + " is displayed" +_betterHomesText.toString() + "<br>");
+//        verifyTextAssertMethod(_betterHomesText,verifyText);
+//        log.info("verify  Text : " + verifyText + " is displayed" +_betterHomesText.toString());
+//    }
 
 }

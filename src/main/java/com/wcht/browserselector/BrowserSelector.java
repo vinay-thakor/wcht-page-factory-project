@@ -4,14 +4,18 @@ package com.wcht.browserselector;/*
  */
 
 import com.wcht.basepage.BasePage;
+import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BrowserSelector extends BasePage {
 
+    private static final Logger log = LogManager.getLogger(BrowserSelector.class.getName());
+
     public String projectpath = System.getProperty("user.dir");
-    private static final Logger log = Logger.getLogger(BrowserSelector.class.getName());
+
+
 
     public void selectBrowser(String browser) {
         if (browser.equalsIgnoreCase("chrome")) {

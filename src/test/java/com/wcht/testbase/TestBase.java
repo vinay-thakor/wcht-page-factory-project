@@ -30,7 +30,8 @@ public class TestBase extends Utility {
     //closes Browser
     @AfterMethod(groups = {"Regression","Smoke","Sanity"})
     public void closeBrowser() {
-        driver.quit();
+
+        //driver.quit();
     }
 
 }
